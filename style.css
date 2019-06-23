@@ -1,0 +1,166 @@
+/* coded by Irena Popova, Germany*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+  margin: 0;
+  background-color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1em;
+  color: #050709;
+  overflow: hidden;
+}
+#menu {
+  display: none;
+}
+#navbar {
+  float: left;
+  top: 0;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  background-color: #bdf6fd;
+  width: 300px;
+}
+#navbar header {
+  text-align: center;
+  color: #386975;
+  font-size: 1.2em;
+}
+.nav-link {
+  display:block;
+  color: #050709;
+  font-size: 1em;
+  text-decoration: none;
+  padding: 20px;
+  border-top: 1px solid #386975;
+  height: auto;
+}
+.nav-link:hover {
+  animation-name: background-hover;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+}
+@keyframes background-hover {
+  100% {
+    background-color: #74f7f2;
+    padding-left: 30px;
+  }
+}
+.nav-link:active {
+  color: #386975;
+}
+#page {
+  /* for the cool scrolling effect! */
+  overflow: scroll;
+  scroll-behavior: smooth;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.main-section {
+  margin: 30px 40px 0 340px;
+  margin-left: 340px;
+  margin-right: 40px;
+  z-index: -10;
+}
+.main-section h2 {
+  font-size: 30px;
+  color: #386975;
+}
+.main-section a {
+  color: #386975;
+}
+.main-section a:visited {
+  color: #204a54;
+}
+pre, code {
+  background-color: #d5f3f7;
+}
+pre {
+  border: solid 0.5px #386975;
+  padding: 15px;
+  border-radius: 10px;
+  white-space: pre-wrap;
+}
+p code, li code {
+  font-weight: bold;
+}
+footer {
+  background-color: #b3f3fb;
+  text-align: center;
+  padding: 10px;
+  margin-left: 300px;
+  font-size: 0.8em;
+}
+footer a {
+  color: #386975;
+}
+footer a:visited {
+  color: #204a54;
+}
+@media screen and (max-width: 700px) {
+  #navbar {
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    left:0;
+    margin: 0;
+    height: initial;
+    font-size: 1em;
+    max-height: 0;
+    overflow: scroll;
+    z-index: 30;
+  }
+  #navbar header {
+    font-size: 1.1em;
+  }
+  .nav-link {
+    padding: 10px;
+  }
+  .main-section {
+    margin: auto;
+  }
+  #page {
+    padding: 4%;
+    overflow: auto;
+    margin: auto;
+    scroll-behavior: smooth;
+    height: 100vh;
+  }
+  footer {
+    margin: 0;
+  }
+  header h1 {
+    display:none;
+  }
+  #menu {
+    display: block;
+  }
+  input#menu {
+    display:none;
+  }
+  label {
+    font-size: 30px;
+    color: #386975;
+    cursor: pointer;
+    background: url("https://s15.postimg.cc/cpsibt28r/menu.png") no-repeat 2% 50%;
+    padding: 30px 0 30px 60px;
+    line-height: 1.5em;
+    transition: 0.3s;
+  }
+  input:checked~label {
+    background: url("https://s15.postimg.cc/uva23rbqz/error.png") no-repeat 2% 50%;
+  }
+  input:checked~#navbar {
+    max-height: 80%;
+    transition: 0.5s;
+  }
+  .back-to-top div{
+    background: url("https://s15.postimg.cc/9itty1tzv/play-button.png") no-repeat;
+    transform: rotate(-90deg);
+    width: 24px;
+    padding: 5px;
+    height: 24px;
+    cursor: pointer;
+  }
+}
